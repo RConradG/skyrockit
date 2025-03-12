@@ -37,6 +37,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  applications: [applicationSchema], // embedding the applicationSchema here
 });
 
 const User = mongoose.model('User', userSchema);
